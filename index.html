@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -22,13 +23,15 @@
       <span class="preloader-logo">EM<span>.</span></span>
     </div>
     <p class="preloader-text">MEMUAT PORTFOLIO</p>
-    <div class="preloader-bar">
-      <span class="preloader-progress"></span>
+    <div class="preloader-loading-box" role="status" aria-live="polite">
+      <div class="preloader-loading-track"><span class="preloader-progress" id="loadingProgress"></span></div>
+      <div class="preloader-loading-meta"><span>PLEASE WAIT...</span><strong id="loadingPercent">0%</strong></div>
     </div>
   </div>
 </div>
 
 <div class="starfield" id="starfield" aria-hidden="true"></div>
+<div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
 
 <header class="navbar" id="navbar">
   <a href="#home" class="logo">EM<span>.</span></a>
@@ -46,11 +49,10 @@
 <section class="hero" id="home">
   <div class="hero-text">
     <p class="eyebrow hero-anim" style="--hero-delay: 0.05s;">PERSONAL PORTFOLIO · 2026</p>
-    <h1 class="hero-anim" style="--hero-delay: 0.15s;">Halo, saya<br><span>Elsa Margaretha.</span></h1>
 
-    <h2 class="typing-heading hero-anim" style="--hero-delay: 0.25s;">
-      <span id="typing">Customer Service</span><span class="cursor">|</span>
-    </h2>
+    <h1 class="hero-anim" style="--hero-delay: 0.15s;">
+      Halo, saya<br><span>Elsa Margaretha.</span>
+    </h1>
 
     <p class="hero-description hero-anim" style="--hero-delay: 0.35s;">
       Fresh graduate Pendidikan Biologi dengan pengalaman merancang materi pembelajaran, memfasilitasi kegiatan belajar bagi lebih dari 90 peserta, serta menyusun dan mengevaluasi instrumen hasil belajar. Memiliki ketertarikan pada bidang pendidikan dan pelatihan, pengembangan sumber daya manusia, serta pelayanan. Terbiasa mengelola administrasi dan data secara terstruktur, berkoordinasi dengan berbagai pihak, serta berkomunikasi secara jelas dan responsif dalam menyelesaikan pekerjaan.
@@ -81,15 +83,28 @@
   <div class="photo-area hero-anim-card" style="--hero-delay: 0.3s;">
     <div class="profile-float" id="profileFloat">
       <div class="profile-card" id="profileCard">
+        <div class="id-card-top">
+          <span class="id-card-brand">PERSONAL PROFILE</span>
+          <span class="id-card-chip">EM<span>.</span></span>
+        </div>
+
         <div class="photo-frame">
           <img src="images/profile.png" alt="Foto profil Elsa Margaretha" draggable="false">
         </div>
-        <div class="photo-caption">
-          <span>GET TO KNOW ME</span>
+
+        <div class="id-card-info">
+          <span class="id-card-label">HELLO, I'M</span>
           <strong>Elsa Margaretha</strong>
+          <span class="id-card-role">BIOLOGY EDUCATION · ADMINISTRATION</span>
+        </div>
+
+        <div class="id-card-bottom">
+          <span>CREATIVE • ADAPTIVE • DETAIL-ORIENTED</span>
+          <span class="id-card-mark">2026</span>
         </div>
       </div>
     </div>
+
     <p class="photo-hint">Geser kartu untuk memutar 3D</p>
   </div>
 </section>
@@ -104,11 +119,13 @@
   <div class="experience-list">
     <article class="experience-card" data-reveal data-tilt data-tilt-max="3.5">
       <div class="experience-date">MARET – SEPTEMBER 2026</div>
+
       <div class="experience-detail">
         <span class="experience-type">CUSTOMER SERVICE · ADMINISTRASI</span>
         <h3>Customer Service Administrator</h3>
         <h4>Treebox Jember</h4>
         <p class="location">Kepatihan, Kaliwates, Jember, Jawa Timur</p>
+
         <ul>
           <li>Mengelola rata-rata 30–40 reservasi pelanggan per hari melalui WhatsApp dan Instagram menggunakan Olsera POS, dengan waktu respons di bawah 8 menit sesuai standar layanan.</li>
           <li>Memberikan informasi layanan, melakukan konfirmasi reservasi, serta menangani pertanyaan, perubahan jadwal, keluhan pelanggan, dan kendala pembayaran.</li>
@@ -121,11 +138,13 @@
 
     <article class="experience-card" data-reveal data-tilt data-tilt-max="3.5">
       <div class="experience-date">2025</div>
+
       <div class="experience-detail">
         <span class="experience-type">PRAKTIK LAPANGAN</span>
         <h3>Praktik Lapangan Persekolahan (PLP)</h3>
         <h4>SMA Argopuro Panti</h4>
         <p class="location">Panti, Jember, Jawa Timur</p>
+
         <ul>
           <li>Memfasilitasi kegiatan pembelajaran pada 4 kelas dengan total lebih dari 100 peserta didik.</li>
           <li>Menyusun perangkat pembelajaran berupa modul ajar, LKPD, media presentasi, serta instrumen evaluasi.</li>
@@ -146,7 +165,6 @@
   </div>
 
   <div class="education-layout">
-
     <div class="education-left">
 
       <!-- RIWAYAT KAMPUS -->
@@ -189,7 +207,6 @@
           <span>Analisis Data</span>
         </div>
       </article>
-
     </div>
 
     <!-- FOTO KEDUA -->
@@ -197,12 +214,12 @@
       <div class="education-photo-frame">
         <img src="images/Profile-education.JPG" alt="Dokumentasi Elsa Margaretha selama masa pendidikan">
       </div>
+
       <div class="education-photo-caption">
         <span>MY ACADEMIC JOURNEY</span>
         <strong>Learning & Growing</strong>
       </div>
     </div>
-
   </div>
 
   <!-- GPA CHART -->
@@ -213,6 +230,7 @@
         <h3>Perkembangan IPS</h3>
         <p class="chart-description">Indeks Prestasi Semester 1–8</p>
       </div>
+
       <div class="chart-legend"><span class="legend-dot"></span> IPS</div>
     </div>
 
@@ -296,12 +314,15 @@
         <a href="images/project-reservasi-2.png" target="_blank" rel="noopener noreferrer"><img src="images/project-reservasi-2.png" alt="Dokumentasi rekap reservasi"></a>
         <a href="images/project-reservasi-3.png" target="_blank" rel="noopener noreferrer"><img src="images/project-reservasi-3.png" alt="Dokumentasi pelayanan pelanggan"></a>
       </div>
+
       <div class="project-info">
         <span class="project-category">ADMINISTRASI & PELAYANAN</span>
         <h3>Administrasi Reservasi</h3>
         <p>Dokumentasi alur reservasi pelanggan, pengelolaan data, template rekap reservasi, dan ilustrasi SOP pelayanan.</p>
         <div class="project-tags">
-          <span>Customer Service</span><span>Data Management</span><span>Administration</span>
+          <span>Customer Service</span>
+          <span>Data Management</span>
+          <span>Administration</span>
         </div>
       </div>
     </article>
@@ -312,13 +333,18 @@
         <a href="images/project-kkn-2.png" target="_blank" rel="noopener noreferrer"><img src="images/project-kkn-2.png" alt="Desain publikasi KKN"></a>
         <a href="images/project-kkn-3.png" target="_blank" rel="noopener noreferrer"><img src="images/project-kkn-3.png" alt="Dokumentasi video kegiatan KKN"></a>
       </div>
+
       <div class="project-info">
         <span class="project-category">DESAIN & PUBLIKASI</span>
         <h3>Media Kreatif KKN</h3>
         <p>Pembuatan desain Instagram feed, brosur, banner, serta video dokumentasi dan rekap kegiatan KKN.</p>
+
         <div class="project-tags">
-          <span>Canva</span><span>Content Design</span><span>Teamwork</span>
+          <span>Canva</span>
+          <span>Content Design</span>
+          <span>Teamwork</span>
         </div>
+
         <div class="project-links">
           <a href="https://www.instagram.com/kkn_kolaboratif.ranulogong?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram KKN ↗</a>
           <a href="https://youtube.com/@kkn_kolaboratif_ranulogong?si=zD7x6YOR8FZAFeN9" target="_blank" rel="noopener noreferrer">YouTube KKN ↗</a>
@@ -332,13 +358,18 @@
         <a href="images/project-pendidikan-2.png" target="_blank" rel="noopener noreferrer"><img src="images/project-pendidikan-2.png" alt="Dokumentasi LKPD"></a>
         <a href="images/project-pendidikan-3.png" target="_blank" rel="noopener noreferrer"><img src="images/project-pendidikan-3.png" alt="Dokumentasi media pembelajaran"></a>
       </div>
+
       <div class="project-info">
         <span class="project-category">PENDIDIKAN & ADMINISTRASI</span>
         <h3>Perangkat Pembelajaran</h3>
         <p>Penyusunan modul ajar, LKPD, media presentasi, instrumen evaluasi, dan rekapitulasi hasil belajar siswa.</p>
+
         <div class="project-tags">
-          <span>Microsoft Office</span><span>Google Forms</span><span>Data Entry</span>
+          <span>Microsoft Office</span>
+          <span>Google Forms</span>
+          <span>Data Entry</span>
         </div>
+
         <div class="project-links">
           <a href="https://drive.google.com/drive/folders/1tjMlgcPBWJPyJPaKsOezOpTuEPEcF8Jq?usp=drive_link" target="_blank" rel="noopener noreferrer">Lihat Modul Pembelajaran ↗</a>
         </div>
@@ -351,13 +382,18 @@
         <a href="images/project-analisis-2.png" target="_blank" rel="noopener noreferrer"><img src="images/project-analisis-2.png" alt="Dokumentasi analisis data"></a>
         <a href="images/project-analisis-3.png" target="_blank" rel="noopener noreferrer"><img src="images/project-analisis-3.png" alt="Visualisasi hasil penelitian"></a>
       </div>
+
       <div class="project-info">
         <span class="project-category">PENELITIAN & ANALISIS DATA</span>
         <h3>Analisis Data Penelitian</h3>
         <p>Pengolahan data penelitian miskonsepsi siswa menggunakan instrumen Five-Tier Diagnostic Test, Excel, SPSS, dan visualisasi data.</p>
+
         <div class="project-tags">
-          <span>Microsoft Excel</span><span>SPSS</span><span>Data Visualization</span>
+          <span>Microsoft Excel</span>
+          <span>SPSS</span>
+          <span>Data Visualization</span>
         </div>
+
         <div class="project-links">
           <a href="https://docs.google.com/spreadsheets/d/1bk99C2zuibWOZrGBP1ITVMsC4KcRLA0a/edit?usp=sharing&ouid=103869267224320355983&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Lihat Data Penelitian ↗</a>
         </div>
@@ -383,6 +419,7 @@
         <p>Kemampuan interpersonal dan cara bekerja.</p>
       </div>
     </div>
+
     <div class="soft-skill-list">
       <span>Communication</span>
       <span>Active Listening</span>
@@ -403,19 +440,23 @@
         <p>Kemampuan teknis yang diperoleh melalui pengalaman dan pembelajaran.</p>
       </div>
     </div>
+
     <div class="hard-skill-grid">
       <article class="hard-skill-card" data-tilt data-tilt-max="5">
         <h4>Customer Service</h4>
         <p>Customer Handling, Complaint Handling, Customer Relation, Reservation Management.</p>
       </article>
+
       <article class="hard-skill-card" data-tilt data-tilt-max="5">
         <h4>Administration</h4>
         <p>Data Entry, Data Management, Record Keeping, Administrative Support.</p>
       </article>
+
       <article class="hard-skill-card" data-tilt data-tilt-max="5">
         <h4>Education</h4>
         <p>Learning Materials Development, Lesson Planning, Learning Evaluation, Classroom Management.</p>
       </article>
+
       <article class="hard-skill-card" data-tilt data-tilt-max="5">
         <h4>Data Processing</h4>
         <p>Data Recapitulation, Basic Data Analysis, Spreadsheet Management, Data Visualization.</p>
@@ -548,6 +589,7 @@
         <p>Presentasi hasil penelitian pada konferensi bidang biologi dan pendidikan.</p>
       </div>
     </article>
+
     <article class="achievement-item" data-reveal>
       <span class="achievement-year">2026</span>
       <div>
@@ -555,6 +597,7 @@
         <p>Publikasi artikel ilmiah berdasarkan penelitian skripsi.</p>
       </div>
     </article>
+
     <article class="achievement-item" data-reveal>
       <span class="achievement-year">2025</span>
       <div>
@@ -562,6 +605,7 @@
         <p>Publikasi artikel kegiatan pengabdian masyarakat melalui program KKN.</p>
       </div>
     </article>
+
     <article class="achievement-item" data-reveal>
       <span class="achievement-year">2026</span>
       <div>
@@ -569,6 +613,7 @@
         <p>Skor 603 – Language Center UIN KHAS Jember.</p>
       </div>
     </article>
+
     <article class="achievement-item" data-reveal>
       <span class="achievement-year">2023</span>
       <div>
@@ -580,23 +625,28 @@
 
   <div class="achievement-gallery">
     <h3 class="gallery-title" data-reveal>Dokumentasi Pencapaian</h3>
+
     <div class="achievement-photos">
       <a href="images/achievement-1.png" target="_blank" rel="noopener noreferrer" data-reveal data-tilt data-tilt-max="6">
         <img src="images/achievement-1.png" alt="Dokumentasi Presenter BIOTIC 5">
         <span>Presenter BIOTIC 5</span>
       </a>
+
       <a href="images/achievement-2.png" target="_blank" rel="noopener noreferrer" data-reveal data-tilt data-tilt-max="6">
         <img src="images/achievement-2.png" alt="Dokumentasi Publikasi Artikel Ilmiah">
         <span>Publikasi Artikel Ilmiah</span>
       </a>
+
       <a href="images/achievement-3.png" target="_blank" rel="noopener noreferrer" data-reveal data-tilt data-tilt-max="6">
         <img src="images/achievement-3.png" alt="Dokumentasi Publikasi Artikel Pengabdian">
         <span>Publikasi Artikel Pengabdian</span>
       </a>
+
       <a href="images/achievement-4.png" target="_blank" rel="noopener noreferrer" data-reveal data-tilt data-tilt-max="6">
         <img src="images/achievement-4.png" alt="Sertifikat English Proficiency Test">
         <span>English Proficiency Test</span>
       </a>
+
       <a href="images/achievement-5.png" target="_blank" rel="noopener noreferrer" data-reveal data-tilt data-tilt-max="6">
         <img src="images/achievement-5.png" alt="Sertifikat Pelatihan Sekolah Media">
         <span>Pelatihan Sekolah Media</span>
@@ -633,11 +683,28 @@
     const minDisplayTime = 650;
     const maxDisplayTime = 2000;
     const startTime = performance.now();
+    const progress = document.getElementById("loadingProgress");
+    const percent = document.getElementById("loadingPercent");
     let hidden = false;
+    let currentProgress = 0;
+
+    const progressTimer = setInterval(() => {
+      const elapsed = performance.now() - startTime;
+      const target = Math.min(94, Math.round((elapsed / maxDisplayTime) * 94));
+      currentProgress = Math.max(currentProgress, target);
+
+      if (progress) progress.style.width = `${currentProgress}%`;
+      if (percent) percent.textContent = `${currentProgress}%`;
+    }, 45);
 
     function hidePreloader() {
       if (hidden) return;
       hidden = true;
+
+      clearInterval(progressTimer);
+
+      if (progress) progress.style.width = "100%";
+      if (percent) percent.textContent = "100%";
 
       preloader.classList.add("is-hidden");
       document.body.classList.remove("is-loading");
@@ -658,49 +725,37 @@
     setTimeout(hidePreloader, maxDisplayTime);
   })();
 
-  // 2. TYPING EFFECT
-  const roles = [
-    "Customer Service",
-    "Customer Relation",
-    "Learning & Development",
-    "Biology Educator",
-    "Teacher & Tutor"
-  ];
+  // 3. CUSTOM CURSOR + MICRO INTERACTIONS
+  const customCursor = document.getElementById("customCursor");
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  let roleIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
+  if (customCursor && finePointer && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.body.classList.add("has-custom-cursor");
 
-  function typingEffect() {
-    const typingElement = document.getElementById("typing");
-    const currentText = roles[roleIndex];
+    window.addEventListener("pointermove", (event) => {
+      customCursor.style.left = `${event.clientX}px`;
+      customCursor.style.top = `${event.clientY}px`;
+      customCursor.classList.add("is-visible");
+    }, { passive: true });
 
-    if (!deleting) {
-      typingElement.textContent = currentText.substring(0, charIndex + 1);
-      charIndex++;
-
-      if (charIndex === currentText.length) {
-        deleting = true;
-        setTimeout(typingEffect, 1500);
-        return;
+    document.addEventListener("pointerover", (event) => {
+      if (event.target.closest("a, button, [data-tilt], #profileCard")) {
+        customCursor.classList.add("is-hovering");
       }
-    } else {
-      typingElement.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
+    });
 
-      if (charIndex === 0) {
-        deleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
+    document.addEventListener("pointerout", (event) => {
+      if (event.target.closest("a, button, [data-tilt], #profileCard")) {
+        customCursor.classList.remove("is-hovering");
       }
-    }
+    });
 
-    setTimeout(typingEffect, deleting ? 60 : 100);
+    document.addEventListener("pointerleave", () => customCursor.classList.remove("is-visible"));
   }
 
-  typingEffect();
-
-  // 3. NAVBAR SCROLL DEPTH
+  // 4. NAVBAR SCROLL DEPTH
   const navbar = document.getElementById("navbar");
+
   window.addEventListener("scroll", () => {
     navbar.classList.toggle("is-scrolled", window.scrollY > 20);
   }, { passive: true });
@@ -725,6 +780,7 @@
     profileCard.classList.add("is-dragging");
     profileFloat.classList.add("is-paused");
     profileCard.setPointerCapture(event.pointerId);
+
     event.preventDefault();
   });
 
@@ -805,6 +861,7 @@
 
   if (prefersReducedMotion) {
     starfield.style.display = "none";
+
     document.querySelectorAll("[data-reveal]").forEach((el) => {
       el.classList.add("is-revealed", "reveal-done");
     });
@@ -813,9 +870,11 @@
 
     // Beri jeda berurutan (stagger) untuk kartu dalam satu kelompok
     const parentCounters = new WeakMap();
+
     revealElements.forEach((el) => {
       const parent = el.parentElement;
       const count = parentCounters.get(parent) || 0;
+
       el.style.setProperty("--reveal-delay", `${Math.min(count * 75, 450)}ms`);
       parentCounters.set(parent, count + 1);
     });
@@ -873,12 +932,14 @@
 
         card.style.setProperty("--mx", `${x.toFixed(1)}px`);
         card.style.setProperty("--my", `${y.toFixed(1)}px`);
+
         card.style.transform =
           `perspective(950px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(6px)`;
       });
 
       card.addEventListener("pointerleave", () => {
         card.classList.remove("is-tilting");
+
         card.style.transform =
           "perspective(950px) rotateX(0deg) rotateY(0deg) translateZ(0px)";
       });
